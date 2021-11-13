@@ -5,14 +5,17 @@ import yfinance as yf
 import alpaca_trade_api as tradeapi
 from signaling import *
 
+#change for when not using paper account
 os.environ['APCA_API_BASE_URL'] = 'https://paper-api.alpaca.markets'
 
 #API Creds
-api = tradeapi.REST('PKHWHSX2YRBE0E651YZ2', 'Tb6BcjXW7GjqfOdrrcoY46q6jbnHvp4e2Fz4nRvM', api_version='v2')
+ALPACA_PUBLIC_KEY = #insert public key here
+ALPACA_PRIVATE_KEY = #insert private key here
+api = tradeapi.REST(ALPACA_PUBLIC_KEY, ALPACA_PRIVATE_KEY, api_version='v2')
 account = api.get_account()
 
 #polygon key
-key = 'rf69drQkfvcHKpmG8GtJynwqXSUFus1S'
+key = #polygon.io api key
 
 #list of all NYSE, AMEX, NASDAQ symbols that return a years worth of history
 df_symbols = pd.read_csv("polygon-list.csv")
