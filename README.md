@@ -5,4 +5,6 @@ Creates short and long simple moving averages and exponential moving averages, a
 
 Uses Polygon.io Stocks API, yfinance, and Alpaca Trading API for market data and for placing orders.  
 
-
+signaling.py --> analyzes data and returns buy/sell signal
+algo-trader.py --> calls signaling.py functions and places buy/sell orders
+polygon-list.csv --> file containing list of all small-cap and larger equities in NYSE, NASDAQ, and AMEX, used in algo-trader.py
