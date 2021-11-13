@@ -265,18 +265,3 @@ def sellSignal(ticker, time_frame, key):
 
 
 
-
-key = 'rf69drQkfvcHKpmG8GtJynwqXSUFus1S'
-
-
-#movingAverages('BORR', 7, key)
-buySignal('HEI', 7, key)
-
-#def trader():
-#    key = 'rf69drQkfvcHKpmG8GtJynwqXSUFus1S'
-#    for symbol in symbols:
-#        with RESTClient(key) as client:
-#            resp = client.stocks_equities_daily_open_close(symbol, "2021-11-09")
-#            print(f"On: {resp.from_} {symbol} opened at {resp.open} and closed at {resp.close}")
-
-#trader()
