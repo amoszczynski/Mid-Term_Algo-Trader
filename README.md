@@ -14,4 +14,5 @@ This code is to be automated (I used google cloud platform's cloud functions and
 
 # Version History
 v1: original algorithm, two files, uses golden cross and MACD for buying, MACD and stochastic for selling.  
-v2: one file (analyzes and places orders in one file), uses Golden Cross, RSI, and MACD for buying, MACD, RSI, stochastic, and other signals for selling.
+v2: one file (analyzes and places orders in one file), uses Golden Cross, RSI, and MACD for buying, MACD, RSI, stochastic, and other signals for selling.  
+v3: got rid of the stalling ema indicator, opted for simpler price < SMA metric. limited RSI in buy confirmation from 50 - 80. Buys stocks with limit order of 2.5% deficit instead of market orders in order to limit initial loss. Set time frame of golden cross lower in order to buy closer to upward trend.
