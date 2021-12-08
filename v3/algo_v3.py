@@ -149,8 +149,8 @@ def sellSignal(ticker, time_frame):
             days =+ 1
 
     #see if price is under MA
-    prices = df['Close'].toList()
-    if prices[-1] < sum(prices[-50:] / 50):
+    prices = df['Close'].tolist()
+    if prices[-1] < (sum(prices[-50:]) / 50):
         p_under = True
     
     #confirm with RSI
@@ -187,12 +187,15 @@ def sellSignal(ticker, time_frame):
 #initialize environment
 os.environ['APCA_API_BASE_URL'] = 'https://paper-api.alpaca.markets'
 
+pub_key = 'ALPACA API PUBLIC KEY HERE'
+priv_key = 'ALPACA API PRIVATE KEY HERE'
+
 #API Creds
-api = tradeapi.REST('PKSZN7WVPIXZ104F8026', 'uSYUqCDmqxyhn2aHBunz88d7I7NeHujiGXXndJza', api_version='v2')
+api = tradeapi.REST(pub_key, priv_key , api_version='v2')
 account = api.get_account()
 
 #polygon key
-key = 'rf69drQkfvcHKpmG8GtJynwqXSUFus1S'
+key = 'POLYGON KEY HERE'
 
 #print(goldenCross('NI', 7, key))
 
